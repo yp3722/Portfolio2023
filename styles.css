@@ -8,10 +8,8 @@ body {
   margin-top: 0;
 }
 
-
-
 body.dark-mode {
-  background-color: #1d1d1d;
+  background-color: #0B1416;
   color: #fdfdfd;
 }
 
@@ -298,6 +296,27 @@ html::-webkit-scrollbar {
   }
 }
 
+.project-tile {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 20px 20px 0px 0px;
+  padding-bottom: 5px;
+}
+
+.project-tile h3,
+.project-tile p {
+  margin-left: 5px;
+}
+
+.project-tile:hover {
+  transform: translate(9px, -6px);
+  box-shadow: -3px 3px 10px #347cf82e;
+}
+
+.project-image{
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  margin: 10px 0px;
+}
 
 @media screen and (min-width: 1023px) {
   .parent{

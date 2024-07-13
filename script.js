@@ -8,11 +8,25 @@
 
 // gsap.ticker.lagSmoothing(0);
 
+let darkMode = JSON.parse(localStorage.getItem("darkMode")) ?? false;
+let switchElement = document.getElementById('Switch');
 
 function toggleDarkMode() {
+  darkMode = !darkMode;
+  localStorage.setItem("darkMode",JSON.stringify(darkMode));
   document.body.classList.toggle('dark-mode');
 }
 
+
+
+function init() {
+  switchElement.checked = !darkMode;
+  if (darkMode) {
+    document.body.classList.add('dark-mode');
+  }
+}
+
+window.onload = init;
 // let initialLoadTimeline = gsap.timeline({defaults:{duration: 0.75, opacity: 0, ease: "expo.out"}});
 // initialLoadTimeline
 //     .from('.landing-introduction h1',{x :'-95%'}, 0)
